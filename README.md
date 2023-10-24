@@ -1,9 +1,9 @@
 # demo-app
 demo app
 
-#requirements:
+# requirements:
 back: 
-dotnet SDK 7, DOWNLOAD FROM HERE https://dotnet.microsoft.com/en-us/download
+- dotnet SDK 7, DOWNLOAD FROM HERE https://dotnet.microsoft.com/en-us/download
 
 front:
 - Node js: https://nodejs.org/es
