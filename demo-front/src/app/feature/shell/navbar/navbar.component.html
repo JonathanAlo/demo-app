@@ -1,0 +1,38 @@
+<nav class="d-flex align-items-center justify-content-between p-2 border">
+    <section class="d-flex align-items-center justify-content-start gap-2">
+        <p class="mb-0">App Material Demo - Proseso</p>
+    </section>
+    <section class="d-flex align-items-center justify-content-end gap-4">
+        <a href="https://material.angular.io/components/categories" target="_blank" class="btn btn-sm btn-primary">Angular material</a>
+        <a href="https://angular.io/" target="_blank" class="btn btn-sm btn-primary">Angular</a>
+        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#signgIn">Login</button>
+    </section>
+</nav>
+<!-- Login card user -->
+<div class="modal fade" id="signgIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <mat-card class="modal-dialog modal-content p-3">
+        <section class="d-flex align-items-center justify-content-between">
+            <small>Sign In</small>
+            <button class="btn btn-sm d-flex d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                <mat-icon class="d-flex d-flex justify-content-center align-items-center">close</mat-icon>
+            </button>
+        </section>
+        <hr class="hr my-1">
+        <section class="d-flex flex-column p-1">
+            <p class="h4">Enter your credentials</p>
+            <form class="d-flex flex-column gap-2" [formGroup]="tokenForm" (ngSubmit)="signIn()">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input formControlName="email" type="email" name="email" id="email" class="form-control form-control-sm">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input formControlName="password" type="password" name="password" id="password" class="form-control form-control-sm">
+                </div>
+                <button class="btn btn-sm btn-success fw-bold py-2 mt-3">Send request</button>
+            </form>
+        </section>
+    </mat-card>
+</div>
+  

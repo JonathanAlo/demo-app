@@ -1,0 +1,10 @@
+[
+    {"id": 1, "firstname": "Paola", "lastname": "Gonzales", "Email": "paola@gmail.com", "role": "hr", "img": "", "file": "", "commit": "Great person"},
+    {"id": 2, "firstname": "Marcos", "lastname": "Daniel", "Email": "Marcos@gmail.com", "role": "hr", "img": "", "file": "", "commit": "Great person"},
+    {"id": 3, "firstname": "Pedro", "lastname": "Castillo", "Email": "Pedro@gmail.com", "role": "hr", "img": "", "file": "", "commit": "Great person"},
+    {"id": 4, "firstname": "German", "lastname": "venri", "Email": "German@gmail.com", "role": "hr", "img": "", "file": "", "commit": "Great person"},
+    {"id": 5, "firstname": "Patricio", "lastname": "Estrella", "Email": "Patricio@gmail.com", "role": "hr", "img": "", "file": "", "commit": "Great person"},
+    {"id": 6, "firstname": "User 2", "lastname": "lastaname 34", "Email": "User@gmail.com", "role": "hr", "img": "", "file": "", "commit": "Great person"},
+    {"id": 7, "firstname": "User 4", "lastname": "lastname 34", "Email": "User@gmail.com", "role": "hr", "img": "", "file": "", "commit": "Great person"},
+    {"id": 8, "firstname": "User 3", "lastname": "lastname 23", "Email": "User@gmail.com", "role": "hr", "img": "", "file": "", "commit": "Great person"}
+]

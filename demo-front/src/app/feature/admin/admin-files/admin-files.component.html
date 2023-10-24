@@ -1,0 +1,70 @@
+<main class="d-flex w-100">
+    <article class="d-flex vh-100">
+        <app-sidebar></app-sidebar>
+    </article>
+    <section class="d-flex flex-column w-100 gap-2">
+        <app-navbar></app-navbar>
+        <article class="d-flex flex-column p-3">
+            <p class="h2">File encryptation</p>
+            <hr class="hr my-1">
+            <section class="d-flex gap-2 align-items-start justify-content-between">
+                <article class="col bg-white border rounded p-1">
+                    <header class="d-flex mb-0 align-items-center justify-content-between">
+                        <p class="m-0">Files list</p>
+                        <button class="btn btn-sm btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#upload">Upload new file</button>
+                    </header>
+                    <hr class="hr my-0">
+                    <section class="d-flex flex-column mt-3">
+                        <div class="d-flex align-items-center justify-content-between" *ngFor="let item of listItems; let i = index">
+                            <small>Example document #{{ i+1 }}</small>
+                            <div class="btn-group">
+                                <!--button class="d-flex align-items-center justify-content-center btn btn-sm">
+                                    <mat-icon class="d-flex align-items-center justify-content-center">delete_forever</mat-icon>
+                                </button-->
+                                <button class="d-flex align-items-center justify-content-center btn btn-sm" (click)="getFile(item)">
+                                    <mat-icon class="d-flex align-items-center justify-content-center">remove_red_eye</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <article class="col-8 border rounded bg-white border rounded shadow d-flex align-items-center justify-content-center">
+                    <div class="d-flex align-items-center justify-content-center w-100">
+                        <img [src]="fileUrluser" class="img-fluid d-flex">
+                        <!--iframe src="../../../../assets/img/Sin margen.pdf" style="height: 100vh; width: 100%;" frameborder="0"></iframe-->
+                    </div>
+                </article>
+            </section>
+        </article>
+    </section>
+</main>
+
+<!-- MODAL UPLOAD FILE -->
+<div class="modal fade" id="upload" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <mat-card class="modal-dialog modal-content p-3">
+        <section class="d-flex align-items-center justify-content-between">
+            <small>Upload new file</small>
+            <button class="btn btn-sm d-flex d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                <mat-icon class="d-flex d-flex justify-content-center align-items-center">close</mat-icon>
+            </button>
+        </section>
+        <hr class="hr my-1">
+        <div class="d-flex flex-column mt-3">
+            <label *ngIf="!fileName" for="fileUpload" class="btn btn-sm btn-primary py-2">Select file</label>
+            <label *ngIf="fileName" for="fileUpload" class="border-success border rounded shadow-sm py-2 d-flex gap-2 align-items-center justify-content-center">
+                File: <b class="text-seccess">{{ fileName }}</b>. is ready!
+                <span *ngIf="uploading" class="spinner-border text-primary spinner-border-sm" aria-hidden="true"></span>
+            </label>
+            <small class="text-center text-secondary my-2">your file must be png, jpg or jpeg extension</small>
+            <input type="file" accept=".png, .jpeg, .jpg, .pdf" (change)="onFileChange($event)" name="fileUpload" id="fileUpload" hidden>
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <hr class="my-0">
+                <button *ngIf="fileName" class="btn btn-sm btn-primary py-2 px-4 d-flex align-items-center justify-content-center mt-4" (click)="uploadFile(itemFile!)">
+                    <mat-icon class="d-flex align-items-center justify-content-center">upload</mat-icon>
+                    <span>Upload file selected</span>
+                </button>
+            </div>
+        </div>
+    </mat-card>
+</div>

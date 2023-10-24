@@ -1,0 +1,9 @@
+<section class="d-flex flex-column vh-100 p-1 shadow-sm">
+    <figure class="d-flex align-items-center justify-content-center">
+        <img src="./../../../../assets/img/logo-proseso.png" width="70" alt="">
+    </figure>
+    <a class="btn btn-sm d-flex align-items-center gap-2 mb-2" *ngFor="let item of menuItems" href="{{ item.link }}">
+        <mat-icon>{{ item.icon}}</mat-icon>
+        <p class="mb-0">{{ item.text }}</p>
+    </a>
+</section>
