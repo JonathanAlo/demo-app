@@ -2,10 +2,10 @@
 demo app
 
 # requirements:
-back: 
+backend: 
 - dotnet SDK 7, DOWNLOAD FROM HERE https://dotnet.microsoft.com/en-us/download
 
-front:
+frontend:
 - Node js: https://nodejs.org/es
 - Angular CLI: https://angular.io/cli
 
